@@ -78,17 +78,18 @@
 
 \def\beamer@sidebarformat#1#2#3{%
   \begin{beamercolorbox}[wd=\beamer@sidebarwidth,leftskip=#1,rightskip=1ex plus1fil,vmode]{#2}
+    \vskip-.5mm%
     \vbox{}%
     #3\par%
     \vbox{}%
-    \vskip-1.5ex%
+    \vskip-2mm%
   \end{beamercolorbox}
 }
 
 \defbeamertemplate*{section in sidebar}{sidebar theme}
 {%
   \vbox{%
-    \vskip1ex%
+    \vskip0.3mm%
     \beamer@sidebarformat{3pt}{section in sidebar}{\insertsectionhead}%
   }%
 }
@@ -96,7 +97,7 @@
 \defbeamertemplate*{section in sidebar shaded}{sidebar theme}
 {%
   \vbox{%
-    \vskip1ex%
+    \vskip0.3mm%
     \beamer@sidebarformat{3pt}{section in sidebar shaded}{\insertsectionhead}%
   }%
 }
@@ -131,18 +132,8 @@
     \beamer@tempdim=\beamer@sidebarwidth%
     \advance\beamer@tempdim by -6pt%
     {\usebeamerfont{title in sidebar}%
-      \vskip1.5em%
-      \hskip3pt%
-      \usebeamercolor[fg]{title in sidebar}%
-      \insertshorttitle[width=\beamer@tempdim,center,respectlinebreaks]\par%
-      \vskip1.25em%
-    }%
-    {%
-      \hskip3pt%
-      \usebeamercolor[fg]{author in sidebar}%
-      \usebeamerfont{author in sidebar}%
-      \insertshortauthor[width=\beamer@tempdim,center,respectlinebreaks]\par%
-      \vskip1.25em%
+      \insertlogo
+      \vskip1mm%
     }%
     \insertverticalnavigation{\beamer@sidebarwidth}%
     \vfill

@@ -13,12 +13,14 @@
 \mode<presentation>
 
 \definecolor{beamer@blendedblue}{rgb}{0.2,0.2,0.7} % use structure theme to change
+\definecolor{FSIgreen}{rgb}{0.52, 0.77, 0.25} 
+\definecolor{FSIblue}{rgb}{0.14,0.43,0.6} 
 
 \setbeamercolor{normal text}{fg=black,bg=white}
 \setbeamercolor{alerted text}{fg=red}
 \setbeamercolor{example text}{fg=green!50!black}
 
-\setbeamercolor{structure}{fg=beamer@blendedblue}
+\setbeamercolor{structure}{fg=red}
 
 \setbeamercolor{background canvas}{parent=normal text}
 \setbeamercolor{background}{parent=background canvas}
@@ -39,9 +41,9 @@
 
 \setbeamercolor{normal text in math text}{}
 
-\setbeamercolor{local structure}{parent=structure}
+\setbeamercolor{local structure}{parent=structure,fg=FSIblue}
 
-\setbeamercolor{titlelike}{parent=structure}
+\setbeamercolor{titlelike}{parent=structure,fg=FSIblue}
 
 \setbeamercolor{title}{parent=titlelike}
 \setbeamercolor{title in head/foot}{parent=palette quaternary}
@@ -69,21 +71,21 @@
 \setbeamercolor{section name}{}
 \setbeamercolor{section title}{parent=titlelike}
 
-\setbeamercolor{section in toc}{parent=structure}
+\setbeamercolor{section in toc}{parent=structure,fg=black}
 \setbeamercolor{section in toc shaded}{parent=section in toc}
 \setbeamercolor{section in head/foot}{parent=palette tertiary}
-\setbeamercolor{section in sidebar}{parent=palette sidebar secondary}
-\setbeamercolor{section in sidebar shaded}{use=section in sidebar,fg=section in sidebar.fg!40!bg}
+\setbeamercolor{section in sidebar}{parent=palette sidebar secondary,fg=FSIblue,bg=FSIgreen}
+\setbeamercolor{section in sidebar shaded}{use=section in sidebar,fg=FSIgreen}
 \setbeamercolor{section number projected}{parent=item projected}
 
 \setbeamercolor{subsection name}{}
 \setbeamercolor{subsection title}{parent=titlelike}
 
-\setbeamercolor{subsection in toc}{}
+\setbeamercolor{subsection in toc}{parent=section in toc}
 \setbeamercolor{subsection in toc shaded}{parent=subsection in toc}
 \setbeamercolor{subsection in head/foot}{parent=palette secondary}
-\setbeamercolor{subsection in sidebar}{parent=palette sidebar primary}
-\setbeamercolor{subsection in sidebar shaded}{use=subsection in sidebar,fg=subsection in sidebar.fg!40!bg}
+\setbeamercolor{subsection in sidebar}{parent=palette sidebar primary,parent=section in sidebar}
+\setbeamercolor{subsection in sidebar shaded}{use=subsection in sidebar,fg=section in sidebar shaded.fg!60}
 \setbeamercolor{subsection number projected}{parent={subitem projected}}
 
 \setbeamercolor{subsubsection in toc}{parent=subsection in toc}
@@ -96,7 +98,7 @@
 \setbeamercolor{headline}{}
 \setbeamercolor{footline}{}
 
-\setbeamercolor{sidebar}{}
+\setbeamercolor{sidebar}{bg=FSIblue}
 \setbeamercolor{sidebar left}{parent=sidebar}
 \setbeamercolor{sidebar right}{parent=sidebar}
 
