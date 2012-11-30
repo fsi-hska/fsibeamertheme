@@ -7,40 +7,40 @@
 %
 % See the file doc/licenses/LICENSE for more details.
 
-\ProvidesPackageRCS $Header: /home/vedranm/bitbucket/beamer/base/themes/theme/beamerthemeGoettingen.sty,v d02a7cf4d8ae 2010/06/17 09:11:41 rivanvx $
+\ProvidesPackage{FSIBeamerTheme/beamerthemeFSI}
 
-\usecolortheme{FSI}
-\usefonttheme{FSI}
 \beamertemplatenavigationsymbolsempty
 
-\DeclareOptionBeamer{hideothersubsections}{\PassOptionsToPackage{hideothersubsections}{beamerouterthemesidebarFSI}}
-\DeclareOptionBeamer{hideallsubsections}{\PassOptionsToPackage{hideallsubsections}{beamerouterthemesidebarFSI}}
+\DeclareOptionBeamer{hideothersubsections}{\PassOptionsToPackage{hideothersubsections}{\ThemeFolder/beamerouterthemesidebarFSI}}
+\DeclareOptionBeamer{hideallsubsections}{\PassOptionsToPackage{hideallsubsections}{\ThemeFolder/beamerouterthemesidebarFSI}}
 
-\PassOptionsToPackage{right}{beamerouterthemesidebarFSI}
-\PassOptionsToPackage{width=2.5cm}{beamerouterthemesidebarFSI}
+\PassOptionsToPackage{right}{\ThemeFolder/beamerouterthemesidebarFSI}
+\PassOptionsToPackage{width=2.5cm}{\ThemeFolder/beamerouterthemesidebarFSI}
 
-\DeclareOptionBeamer{width}{\PassOptionsToPackage{width=#1}{beamerouterthemesidebarFSI}}
-\DeclareOptionBeamer{left}{\PassOptionsToPackage{left}{beamerouterthemesidebarFSI}}
-\DeclareOptionBeamer{right}{\PassOptionsToPackage{right}{beamerouterthemesidebarFSI}}
+\DeclareOptionBeamer{width}{\PassOptionsToPackage{width=#1}{\ThemeFolder/beamerouterthemesidebarFSI}}
+\DeclareOptionBeamer{left}{\PassOptionsToPackage{left}{\ThemeFolder/beamerouterthemesidebarFSI}}
+\DeclareOptionBeamer{right}{\PassOptionsToPackage{right}{\ThemeFolder/beamerouterthemesidebarFSI}}
 
 \ProcessOptionsBeamer
 
 \mode<presentation>
 
-\usebackgroundtemplate{\hskip2cm{\includegraphics[height=\paperheight]{cup.pdf}}}
-\logo{\includegraphics[width=2.5cm]{text.pdf}}
+\usebackgroundtemplate{\hskip2cm{\includegraphics[height=\paperheight]{\ThemeFolder/cup.pdf}}}
+\logo{\includegraphics[width=2.5cm]{\ThemeFolder/text.pdf}}
 
 \setbeamertemplate{frametitle}{
 \begin{centering}
+\vskip16.5pt
 \insertframetitle
 \par
 \end{centering}
 }
 
-\useoutertheme[height=0pt]{sidebarFSI}
-
-
 {\usebeamercolor{structure}}
+
+\RequirePackage{\ThemeFolder/beamercolorthemeFSI}
+\RequirePackage{\ThemeFolder/beamerouterthemesidebarFSI}
+\RequirePackage{\ThemeFolder/beamerfontthemeFSI}
 
 \mode
 <all>
