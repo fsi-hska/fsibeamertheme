@@ -47,7 +47,7 @@
       \advance\leftskip by0.3cm%
       \rightskip=-\beamer@rightmargin%
       \advance\rightskip by0.3cm plus1fil%
-      {\usebeamercolor[fg]{frametitle}\usebeamerfont{frametitle}\insertframetitle\par}%
+      {\usebeamercolor[fg]{\small{frametitle}}\usebeamerfont{frametitle}\insertframetitle\par}%
       {\usebeamercolor[fg]{framesubtitle}\usebeamerfont{framesubtitle}\insertframesubtitle\par}%
       \vbox{}%
       \vskip-1em%
@@ -62,14 +62,14 @@
       \else%
         \hfill%
       \fi%
-      \ifdim\beamer@sidebarwidth>0pt%  
+      \ifdim\beamer@sidebarwidth>0pt%
         \usebeamercolor[bg]{logo}%
         \vrule width\beamer@sidebarwidth height \beamer@headheight%
         \hskip-\beamer@sidebarwidth%
         \hbox to \beamer@sidebarwidth{\hss\vbox to
           \beamer@headheight{\vss\hbox{\color{fg}\insertlogo}\vss}\hss}%
       \else%
-        \vrule width0pt height \beamer@headheight%  
+        \vrule width0pt height \beamer@headheight%
       \fi%
     \end{beamercolorbox}
   }
@@ -82,7 +82,7 @@
     \vbox{}%
     #3\par%
     \vbox{}%
-    \vskip-2mm%
+    \vskip-2.2mm%
   \end{beamercolorbox}
 }
 
@@ -144,7 +144,7 @@
       \vskip2pt%
     \fi%
   }%
-  
+
   \ifx\beamer@sidebarside\beamer@lefttext%
     \defbeamertemplate*{sidebar right}{sidebar theme}
     {%
